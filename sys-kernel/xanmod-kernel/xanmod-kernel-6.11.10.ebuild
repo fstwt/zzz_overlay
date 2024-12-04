@@ -7,10 +7,10 @@ inherit kernel-build toolchain-funcs
 
 MY_P=linux-${PV%.*}
 #Note: to bump xanmod, check GENPATCHES_P in sys-kernel/gentoo-kernel
-GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 1))
+GENPATCHES_P=genpatches-${PV%.*}-$((${PV##*.} + 2))
 XV="1"
 
-DESCRIPTION="XanMod lts kernel built with Gentoo patches and cjktty"
+DESCRIPTION="XanMod lts kernel built with Gentoo patches"
 HOMEPAGE="https://www.kernel.org/"
 SRC_URI+=" https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${MY_P}.tar.xz
 	https://dev.gentoo.org/~mpagano/dist/genpatches/${GENPATCHES_P}.base.tar.xz
