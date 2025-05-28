@@ -27,13 +27,12 @@ src_compile() {
 src_install() {
 	local -a myopts=(
 		--audit false
-		--color false
+		--color true
 		--foreground-scripts
 		--global
-		--offline
 		--omit dev
 		--prefix "${ED}/usr"
-		--progress false
+		--progress true
 		--verbose
 	)
 	npm "${myopts[@]}" install "${DISTDIR}/${P}.tgz" || die "npm install failed"
