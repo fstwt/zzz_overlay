@@ -1,41 +1,61 @@
 # Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=8
+# EAPI=8
+
+# DESCRIPTION="A strongly-typed functional programming language that compiles to JavaScript"
+# HOMEPAGE="https://www.purescript.org/"
+# SRC_URI="https://registry.npmjs.org/${PN}/-/${P}.tgz"
+# S="${WORKDIR}/package"
+
+# LICENSE="Apache-2.0"
+# SLOT="0"
+# KEYWORDS="~amd64 ~arm64 ~ppc64"
+
+# RDEPEND="
+# 	net-libs/nodejs
+# "
+# BDEPEND="
+# 	>=net-libs/nodejs-16[npm]
+# "
+
+# src_compile() {
+# 	# Skip, nothing to compile here.
+# 	:
+# }
+
+# src_install() {
+# 	local -a myopts=(
+# 		--audit false
+# 		--color true
+# 		--foreground-scripts
+# 		--global
+# 		--omit dev
+# 		--prefix "${ED}/usr"
+# 		--progress true
+# 		--verbose
+# 	)
+# 	npm "${myopts[@]}" install "${DISTDIR}/${P}.tgz" || die "npm install failed"
+
+# 	dodoc *.md *.txt
+# }
+
+
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+EAPI=5
+
+inherit npm
 
 DESCRIPTION="A strongly-typed functional programming language that compiles to JavaScript"
-HOMEPAGE="https://www.purescript.org/"
-SRC_URI="https://registry.npmjs.org/${PN}/-/${P}.tgz"
-S="${WORKDIR}/package"
 
-LICENSE="Apache-2.0"
+LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~ppc64"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
 
-RDEPEND="
-	net-libs/nodejs
-"
-BDEPEND="
-	>=net-libs/nodejs-16[npm]
-"
-
-src_compile() {
-	# Skip, nothing to compile here.
-	:
-}
-
-src_install() {
-	local -a myopts=(
-		--audit false
-		--color true
-		--foreground-scripts
-		--global
-		--omit dev
-		--prefix "${ED}/usr"
-		--progress true
-		--verbose
-	)
-	npm "${myopts[@]}" install "${DISTDIR}/${P}.tgz" || die "npm install failed"
-
-	dodoc *.md *.txt
-}
+DEPEND=""
+RDEPEND=">=net-libs/nodejs-0.8.10
+	${DEPEND}"
