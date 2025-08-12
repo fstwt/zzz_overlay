@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd"[]>
+<pkgmetadata>
+  <maintainer p2:type="person" proxied="no" status="unknown" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance">
+    <email>nobody@nogroup</email>
+    <name>Velsa Sieon</name>
+  </maintainer>
+  <use>
+    <flag name="base">Minimal version, smoothly change font weight by variable</flag>
+    <flag name="cjk-cn">Chinese version, embed with Chinese and Japanese glyphs (ttf only)</flag>
+    <flag name="liga">Font with ligatures</flag>
+    <flag name="nerd">Nerd-Font patched version, add icons for terminal (ttf only)</flag>
+    <flag name="normal">Build with --normal flag, make the font looks not such "Opinioned" , just like JetBrains Mono (with slashed zero).</flag>
+    <flag name="opentype">Minimal version, otf format</flag>
+    <flag name="truetype">Minimal version, ttf format (if nerd or cjk-cn enabled, this flag is ignored.)</flag>
+    <flag name="woff2">Minimal version, woff2 format, for small size on web pages</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">subframe7536/maple-font</remote-id>
+  </upstream>
+</pkgmetadata>
